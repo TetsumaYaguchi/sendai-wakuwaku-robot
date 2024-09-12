@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>初心者向けホームページテンプレート tp_beginner9</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+<div id="container">
+
+
+<header>
+
+<h1 id="logo"><a href="index.html">Sample Company</a></h1>
+
+<address>
+TEL:0120-000-000
+</address>
+
+</header>
+
+
+<div id="contents">
+
+
+<main>
+
+<section>
+
+<h2>当テンプレートの使い方</h2>
+
+<h3>初心者向けマニュアル公開中</h3>
+<p>画像加工やテンプレートの編集方法、無料サーバーを使ってサイトを公開するなど動画をまじえてわかりやすく解説しています。<br>
+<a href="https://template-party.com/file/" target="_blank">初心者向けマニュアルはこちら。</a></p>
+
+<h3>titleタグ、copyright、metaタグ等の設定</h3>
+<p><strong class="color-check">titleタグの設定はとても重要です。念入りにワードを選んで適切に入力しましょう。</strong><br>
+まず、htmlソースが見れる状態にして、<br>
+<span class="look">&lt;title&gt;初心者向けホームページテンプレート tp_beginner9&lt;/title&gt;</span><br>
+を編集しましょう。<br>
+あなたのホームページ名が「Sample Company」だとすれば、<br>
+<span class="look">&lt;title&gt;Sample Company&lt;/title&gt;</span><br>
+とすればＯＫです。SEO対策もするなら冒頭に重要なワードを入れておきましょう。</p>
+<p><strong class="color-check">copyrightを変更しましょう。</strong><br>
+続いてhtmlの下の方にある、<br>
+<span class="look">Copyright&copy; Sample Company All Rights Reserved.</span><br>
+の部分もあなたのサイト名に変更します。</p>
+<p><strong class="color-check">metaタグを変更しましょう。</strong><br>
+htmlソースが見える状態にしてmetaタグを変更しましょう。</p>
+<p>ソースの上の方に、<br>
+<span class="look">content=&quot;ここにサイト説明を入れます&quot;</span><br>
+という部分がありますので、テキストをサイトの説明文に入れ替えます。検索結果の文面に使われる場合もありますので、見た人が来訪したくなるような説明文を簡潔に書きましょう。</p>
+
+<h3>サイト名（ロゴ）はテキストになっています</h3>
+<p>html側の「Sample Company」というテキストを直接入れ替えて下さい。</p>
+
+<h3>自作の画像ロゴに置き換えたい場合</h3>
+<p>ロゴ画像を準備したら、logo.pngにしてimagesフォルダに保存します。<br>
+次に、全htmlの、<br>
+<span class="look">&lt;h1 id=&quot;logo&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Sample Company&lt;/a&gt;&lt;/h1&gt;</span><br>
+を、以下にすればOKです。この場合も「Sample Company」は書き換えておきましょう。<br>
+<span class="look">&lt;h1 id=&quot;logo&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;&lt;img src=&quot;images/logo.png&quot; alt=&quot;Sample Company&quot;&gt;&lt;/a&gt;&lt;/h1&gt;</span><br>
+ロゴの作り方については、<a href="https://template-party.com/file/" target="_blank">初心者向けマニュアル</a>(画像加工ソフト「Pixlr Editor」で画像を編集する（9:58）)で解説しています。</p>
+<p>ロゴの画像幅は、cssフォルダのstyle.cssの、<br>
+<span class="look">#logo img {</span><br>
+の中にあるwidthの値で変更できます。</p>
+
+<h3>フォントサイズについて</h3>
+<p>cssフォルダのstyle.css冒頭で、基準となるフォントサイズを「２箇所」記載しています。<br>
+全体的にフォントサイズを大きくまたは小さくしたいなら、この基準サイズだけを変更すればOKです。</p>
+<p>１つ目はstyle.cssの冒頭に記載されている以下。<br>
+<span class="look">font-size: 13px;</span><br>
+２つ目はその数行下にある、画面幅900px以上の端末向けで、以下。<br>
+<span class="look">font-size: 16px;</span></p>
+<p>お好みで変更して下さい。</p>
+
+<h3>左のメニューについて</h3>
+<p>画面幅が900px以下で、左のメニューが開閉ブロックタイプになります。<br>
+この数値を変更したい場合は、jsフォルダのmain.jsの、<br>
+<span class="look">if(window.innerWidth &lt;= <span class="color-check">900</span>)</span><br>
+の、<span class="color-check">900</span>の数値を変更して下さい。
+</p>
+
+<h3>テンプレートのカラー定義</h3>
+<p>cssフォルダのstyle.cssの冒頭に、<br>
+<span class="look">--primary-color</span><br>
+や、<br>
+<span class="look">--primary-inverse-color</span><br>
+という行がありますが、そこがこのテンプレートのテーマカラーを一括管理している場所です。<br>
+この２ヶ所をお好みのカラーコードに置き換えればテンプレート全体の色が一括変更できます。</p>
+<p>--primary-colorは背景色。<br>
+--primary-inverse-colorは、背景色（--primary-color）の対となる色で主にテキストカラーになります。</p>
+<p>これらを読み込むには、<br>
+<span class="look">var(--primary-color)</span><br>
+や、<br>
+<span class="look">var(--primary-inverse-color)</span><br>
+と書きます。</p>
+<p>もし他の色がいい場合は直接カラーコードで指定しなおして下さい。<br>
+↓Before<br>
+<span class="look">color: var(--primary-inverse-color);</span><br>
+↓After（赤色にしたい場合）<br>
+<span class="look">color: #ff0000;</span>または<span class="look">color: red;</span>でもOK。</p>
+
+<h3>トップページのメイン画像</h3>
+<p>生成AIを使って当サイトで用意したもので、そのままご利用・編集頂いて問題ございません。<br>
+他の素材に入れ替えたい場合は以下ページをご覧下さい。<br>
+<a href="https://photo-chips.com/?act=list&kind=1&html=tp_index.html">写真素材をお探しならこちら</a><br>
+<a href="https://decoruto.com/?act=list&kind=2&html=tp_illust_index.html">イラスト素材をお探しならこちら</a></p>
+
+<h3>その他、テンプレートのカラーやデザイン変更などは</h3>
+<p>cssフォルダのstyle.cssで行って下さい。詳しい解説も書かれています。<br>
+cssの解説は、「<span class="color1">/*</span>」と「<span class="color1">*/</span>」の間にコメントとして入れています。「<span class="color1">/*</span>」と「<span class="color1">*/</span>」はcss用のコメントタグであり、飾りではないので削除をしないで下さい。もし解説を削除したい場合は、「<span class="color1">/*</span>」と「<span class="color1">*/</span>」含めて丸ごと削除して下さい。</p>
+
+<h3>うまく編集できない場合は</h3>
+<p><a href="https://template-party.com/bbs/">サポート掲示板</a>からご質問下さい。対応可能な範囲内でサポートしております。</p>
+
+</section>
+
+</main>
+
+
+<!--開閉ブロック-->
+<div id="menubar">
+
+<h3>MENU</h3>
+
+<nav>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="company.html">会社概要</a></li>
+<li><a href="service.html">サービス紹介</a></li>
+<li><a href="faq.html">よく頂く質問</a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#menubar-->
+
+
+</div>
+<!--/#contents-->
+
+
+<footer>
+<small>Copyright&copy; <a href="index.html">Sample Company</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+
+</div>
+<!--/#container-->
+
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#">▲</a></div>
+
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<div class="menu-icon">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
