@@ -61,7 +61,7 @@ body {
 	-webkit-text-size-adjust: none;
 	background: var(--primary-color);		/*背景色。css冒頭で指定しているprimary-colorを読み込みます*/
 	color: var(--primary-inverse-color);	/*文字色。css冒頭で指定しているprimary-inverse-colorを読み込みます*/
-	line-height: 3;		/*行間*/
+	line-height: 2;		/*行間*/
 	animation: opa1 0.2s 0.5s both;
 }
 
