@@ -76,7 +76,13 @@ input {font-size: 1rem;}
 ul,ol {margin-left: 1.5rem;margin-bottom: 1rem;}
 
 /*table全般の設定*/
-table {border-collapse:collapse;}
+/* table {border-collapse:collapse;} */
+/* 2024-11-07追記 */
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
 /*画像全般の設定*/
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
