@@ -448,3 +448,30 @@ footer {
 	.pc {display: block;}
 
 	}/*追加指定ここまで*/
+
+/*個別のクラスで色を指定 （矢口が追加）*/
+.text-red {
+    color: red; /* 赤色 */
+}
+
+.text-blue {
+    color: #5271ff; /* 青色 */
+}
+
+.text-green {
+    color: #00bf63; /* 緑色 */
+}
+
+.text-orange {
+    color: #eba139; /* 黄色 */
+}
+
+.text-purple {
+    color: #5e17eb; /* 黄色 */
+}
+
+.text-pink {
+    color: #ff66c4; /* 黄色 */
+}
+
+/* 必要に応じて他の色も追加できます */
