@@ -608,6 +608,36 @@ footer {
     /*高さ*/
 }
 
+/*無料体験募集ボタンの設定
+---------------------------------------------------------------------------*/
+.cta-button {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* スクロールに追従しない(固定で表示) */
+    bottom: 20px; /* 下からの配置場所指定 */
+    left: 50%; /* 中央に配置するための設定 */
+    transform: translateX(-50%); /* 中央揃えのための調整 */
+    z-index: 99; /* 他の要素より前面に表示 */
+    width: 90%; /* 親要素の幅を画面の90%に */
+    max-width: 500px; /* 最大幅を制限 */
+}
+
+.cta-button a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff; /* 文字色 */
+    background: #FF8C00; /* 背景色（オレンジ色を例に） */
+    padding: 15px 30px; /* パディング */
+    border-radius: 30px; /* 角丸 */
+    font-size: 18px; /* フォントサイズ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    transition: background 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.cta-button a:hover {
+    background: #E07A00; /* ホバー時の背景色 */
+}
+
 /*その他
 ---------------------------------------------------------------------------*/
 .clearfix::after {

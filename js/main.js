@@ -198,6 +198,17 @@ $(function() {
     });
 });
 
+window.addEventListener('scroll', function () {
+    const ctaButton = document.querySelector('.cta-button');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    // スクロール位置が500px以上でボタンを表示
+    if (scrollPosition > 500) {
+        ctaButton.style.display = 'block';
+    } else {
+        ctaButton.style.display = 'none';
+    }
+});
 
 //===============================================================
 // 汎用開閉処理
