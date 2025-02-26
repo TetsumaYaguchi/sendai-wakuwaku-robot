@@ -116,6 +116,7 @@ img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
+    border-radius: 20px; /* 角を20px丸くする */
 }
 
 /*videoタグ*/
