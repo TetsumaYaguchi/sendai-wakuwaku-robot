@@ -116,7 +116,8 @@ img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
-    border-radius: 20px; /* 角を20px丸くする */
+    border-radius: 20px;
+    /* 角を20px丸くする */
 }
 
 /*videoタグ*/
@@ -487,7 +488,7 @@ footer {
     display: flex;
     flex-direction: row;
     /* 横並びにする */
-    justify-content: center; 
+    justify-content: center;
     /* 水平方向に中央揃え */
     align-items: center;
     /* 中央揃え */
@@ -612,35 +613,84 @@ footer {
 /*無料体験募集ボタンの設定
 ---------------------------------------------------------------------------*/
 .cta-button {
-    display: none; /* 初期状態では非表示 */
-    position: fixed; /* スクロールに追従しない(固定で表示) */
-    bottom: 20px; /* 下からの配置場所指定 */
-    left: 50%; /* 中央に配置するための設定 */
-    transform: translateX(-50%); /* 中央揃えのための調整 */
-    z-index: 99; /* 他の要素より前面に表示 */
-    width: 90%; /* 親要素の幅を画面の90%に */
-    max-width: 500px; /* 最大幅を制限 */
+    display: none;
+    /* 初期状態では非表示 */
+    position: fixed;
+    /* スクロールに追従しない(固定で表示) */
+    bottom: 20px;
+    /* 下からの配置場所指定 */
+    left: 50%;
+    /* 中央に配置するための設定 */
+    transform: translateX(-50%);
+    /* 中央揃えのための調整 */
+    z-index: 99;
+    /* 他の要素より前面に表示 */
+    width: 90%;
+    /* 親要素の幅を画面の90%に */
+    max-width: 500px;
+    /* 最大幅を制限 */
 }
 
 .cta-button a {
     display: block;
     text-decoration: none;
     text-align: center;
-    color: #fff; /* 文字色 */
-    background: #FF8C00; /* 背景色（オレンジ色を例に） */
-    padding: 15px 30px; /* パディング */
-    border-radius: 30px; /* 角丸 */
-    font-size: 18px; /* フォントサイズ */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
-    transition: background 0.3s ease; /* ホバー時のアニメーション */
+    color: #fff;
+    /* 文字色 */
+    background: #FF8C00;
+    /* 背景色（オレンジ色を例に） */
+    padding: 15px 30px;
+    /* パディング */
+    border-radius: 30px;
+    /* 角丸 */
+    font-size: 18px;
+    /* フォントサイズ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 影を追加 */
+    transition: background 0.3s ease;
+    /* ホバー時のアニメーション */
 }
 
 .cta-button a:hover {
-    background: #E07A00; /* ホバー時の背景色 */
+    background: #E07A00;
+    /* ホバー時の背景色 */
 }
 
 /*カスタムボタン*/
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* 水平中央揃え */
+    width: 100%;
+    margin-top: 20px;
+    /* 上部の余白（調整可） */
+}
 
+.custom-button {
+    display: block;
+    /* 横幅を100%使えるようにする */
+    background-color: #FF8800;
+    /* オレンジ色 */
+    color: white;
+    padding: 12px 0;
+    /* 上下の余白 */
+    font-size: 16px;
+    text-align: center;
+    border-radius: 30px;
+    /* 角丸 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    /* 画面の90%幅 */
+    max-width: 400px;
+    /* 最大幅（調整可） */
+}
+
+.custom-button:hover {
+    background-color: #E67E22;
+    /* 少し濃いオレンジ */
+}
 
 /*その他
 ---------------------------------------------------------------------------*/
