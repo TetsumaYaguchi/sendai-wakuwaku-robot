@@ -220,3 +220,23 @@ $(function() {
 		$('.openclose').not(this).next().slideUp();
 	});
 });
+
+//無料体験に申し込むのボタンを押した人の流入元がわかるように、URLのクエリパラメータを取得する関数
+// URLのクエリパラメータを取得する関数
+function getQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  return params.toString(); // 例: "utm_source=google_ad&utm_medium=cpc&utm_campaign=trial_campaign"
+}
+
+// "詳細はこちら"ボタンのリンクを修正
+document.addEventListener("DOMContentLoaded", function () {
+  const detailButton = document.querySelector(".custom-button"); // ボタンのクラス名で取得
+  if (detailButton) {
+    const baseUrl = "https://tetsumayaguchi.github.io/sendai-wakuwaku-robot/coop_shintera_class.html";
+    const queryParams = getQueryParams();
+    if (queryParams) {
+      detailButton.href = `${baseUrl}?${queryParams}`;
+    }
+  }
+});
+
