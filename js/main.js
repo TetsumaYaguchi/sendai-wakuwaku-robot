@@ -198,17 +198,28 @@ $(function() {
     });
 });
 
-window.addEventListener('scroll', function () {
-    const ctaButton = document.querySelector('.cta-button');
-    const scrollPosition = window.scrollY || window.pageYOffset;
+//教室の詳細ページだけで、スクロール時に無料体験申し込みのボタンが表示されるようにする
+if (window.location.pathname.includes('coop_shintera_class.html')) {
+    window.addEventListener('scroll', function () {
+        const ctaButton = document.querySelector('.cta-button');
+        if (!ctaButton) return;
 
-    // スクロール位置が500px以上でボタンを表示
-    if (scrollPosition > 500) {
-        ctaButton.style.display = 'block';
-    } else {
-        ctaButton.style.display = 'none';
-    }
-});
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        ctaButton.style.display = scrollPosition > 500 ? 'block' : 'none';
+    });
+}
+
+// window.addEventListener('scroll', function () {
+//     const ctaButton = document.querySelector('.cta-button');
+//     const scrollPosition = window.scrollY || window.pageYOffset;
+
+//     // スクロール位置が500px以上でボタンを表示
+//     if (scrollPosition > 500) {
+//         ctaButton.style.display = 'block';
+//     } else {
+//         ctaButton.style.display = 'none';
+//     }
+// });
 
 //===============================================================
 // 汎用開閉処理
