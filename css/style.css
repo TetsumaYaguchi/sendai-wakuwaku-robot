@@ -692,6 +692,32 @@ footer {
     /* 少し濃いオレンジ */
 }
 
+/*タイトル（追記）*/
+.title {
+    background-image: url("../images/main_bg.png"); /* 背景画像 */
+    background-size: cover; /* 画面いっぱいに表示（余分な部分をカット） */
+    background-position: center; /* 画像の中央を基準に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+    width: 100%;
+    height: 300px; /* タイトルの高さを指定 */
+    display: flex; /* 中のテキストを中央配置 */
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* 文字色を白に */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 1),2px 2px 10px rgba(0, 0, 0, 1),2px 2px 10px rgba(0, 0, 0, 1); /* 文字に影をつけて読みやすく */
+}
+
+.home-title {
+    font-size: 2rem; /* トップページだけフォントサイズを大きく */
+}
+
+.coopclass-title {
+    font-size: 1rem; /* トップページだけフォントサイズを大きく */
+}
+
 /*その他
 ---------------------------------------------------------------------------*/
 .clearfix::after {
