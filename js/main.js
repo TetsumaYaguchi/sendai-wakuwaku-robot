@@ -199,7 +199,8 @@ $(function() {
 });
 
 //教室の詳細ページだけで、スクロール時に無料体験申し込みのボタンが表示されるようにする
-if (window.location.pathname.includes('coop_shintera_class.html')) {
+//->2025.03.24 品質スコアを完全するために、index.htmlでも無料体験を表示させるようにする
+if (window.location.pathname.includes('coop_shintera_class.html') || window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
     window.addEventListener('scroll', function () {
         const ctaButton = document.querySelector('.cta-button');
         if (!ctaButton) return;
@@ -208,6 +209,16 @@ if (window.location.pathname.includes('coop_shintera_class.html')) {
         ctaButton.style.display = scrollPosition > 500 ? 'block' : 'none';
     });
 }
+// if (window.location.pathname.includes('coop_shintera_class.html')) {
+//     window.addEventListener('scroll', function () {
+//         const ctaButton = document.querySelector('.cta-button');
+//         if (!ctaButton) return;
+
+//         const scrollPosition = window.scrollY || window.pageYOffset;
+//         ctaButton.style.display = scrollPosition > 500 ? 'block' : 'none';
+//     });
+// }
+
 
 // window.addEventListener('scroll', function () {
 //     const ctaButton = document.querySelector('.cta-button');
