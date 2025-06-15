@@ -21,6 +21,21 @@
         <!-- End Google Tag Manager -->
         <link rel="icon" type="image/png" href="images/favicon.ico">
         <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <!-- Event snippet for 無料体験 conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+        <script>
+            function gtag_report_conversion(url) {
+                var callback = function() {
+                    if (typeof (url) != 'undefined') {
+                        window.location = url;
+                    }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-11451105720/8DKuCJbB0NkaELiDqNQq',
+                    'event_callback': callback
+                });
+                return false;
+            }
+        </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8ERJB1PE1"></script>
         <script>
@@ -31,6 +46,8 @@
             gtag('js', new Date());
 
             gtag('config', 'G-K8ERJB1PE1');
+            <!-- ここにGoogle広告の設定追加( 広告のIDを指定) -->
+            gtag('config', 'AW-11451105720');
         </script>
         <meta charset="UTF-8">
         <title>仙台のロボット教室｜レゴ® SPIKE™で楽しく学ぶ！月3,500円｜年長からOK</title>
@@ -143,10 +160,14 @@ Mail: tetsuma.yaguchi@gmail.com
                             <dd>
                                 2025年度のレッスン日程が決定しました。<a href="pdf/2025_lesson.pdf" target="_blank">詳細はこちら</a>
                                 。                            
+                            
+                            
                             <dt>2025/4/28</dt>
                             <dd>
                                 荒井教室は2025年6月のみ、南小泉店で開催いたします。<a href="access.html#minamikoizumi">（アクセス）</a>
                                 。                                                        
+                            
+                            
                             
                             
                             </dd>
@@ -215,10 +236,14 @@ Mail: tetsuma.yaguchi@gmail.com
 
 
 
+
+
 </br></small>
 <small>
     Copyright© <a href="index.html">わくわくロボット教室</a>
     All Rights Reserved.
+
+
 
 
 
@@ -243,7 +268,8 @@ Mail: tetsuma.yaguchi@gmail.com
 <!--/#container-->
 <!-- 無料体験募集ボタン -->
 <div class="cta-button" style="display: none;">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUuvup8Om8l-MWeHnQJWC2lYKw4xeB46uo5EBrbtxILga0dA/viewform?usp=sf_link">無料体験に申し込む</a>
+    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUuvup8Om8l-MWeHnQJWC2lYKw4xeB46uo5EBrbtxILga0dA/viewform?usp=sf_link">無料体験に申し込む</a> -->
+    <a onclick="return gtag_report_conversion('https://docs.google.com/forms/d/e/1FAIpQLSfUuvup8Om8l-MWeHnQJWC2lYKw4xeB46uo5EBrbtxILga0dA/viewform?usp=sf_link');" href="https://docs.google.com/forms/d/e/1FAIpQLSfUuvup8Om8l-MWeHnQJWC2lYKw4xeB46uo5EBrbtxILga0dA/viewform?usp=sf_link">無料体験に申し込む</a>
 </div>
 <!--ページの上部へ戻るボタン-->
 <!-- <div class="pagetop" style="display: none;">
